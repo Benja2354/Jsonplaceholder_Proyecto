@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Script Simple</title>
+    <title>Mi Script</title>
 </head>
 <body> 
     <h1>Mi Proyecto</h1>
-    
     <button id="btnCargar" type="button">Cargar Usuarios</button>
     <select id="menu" disabled>
         <option value="">Esperando usuarios...</option>
@@ -16,6 +15,21 @@
     <div id="datos"></div>
     
     <hr>
+
+    <div id="seccion-formulario" style="display: none; border: 2px dashed #333; padding: 15px; margin-bottom: 20px; background-color: #f9f9f9;">
+        <h3>Agregar Comentario al Post #<span id="label-postId"></span></h3>
+        
+        <form id="formulario-comentario">
+            <input type="hidden" id="form-postId">
+            
+            <input type="text" id="form-nombre" placeholder="Tu nombre" required><br><br>
+            <input type="email" id="form-email" placeholder="Tu correo" required><br><br>
+            <textarea id="form-texto" placeholder="Escribe tu comentario..." required style="width: 100%;"></textarea><br><br>
+            
+            <button type="submit">Guardar Comentario</button>
+            <button type="button" onclick="cerrarFormulario()">Cancelar</button>
+        </form>
+    </div>
 
     <div id="posts">
         <p>Aquí aparecerán los posts...</p>
